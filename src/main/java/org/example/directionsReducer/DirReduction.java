@@ -5,12 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DirReduction {
-    public static String[] dirReduc(String[] arr) {
+    public String[] dirReduc(String[] arr) {
         List<String> reducedList = getReducedList(arr);
         return reducedList.toArray(new String[0]);
     }
 
-    private static List<String> getReducedList(String[] arr) {
+    private List<String> getReducedList(String[] arr) {
         List<String> listToReduce = new ArrayList<>(Arrays.asList(arr));
         boolean continueReducing = true;
 
@@ -33,7 +33,7 @@ public class DirReduction {
         return listToReduce;
     }
 
-    private static boolean areOpposites(String dir1, String dir2) {
+    private boolean areOpposites(String dir1, String dir2) {
         if (dir1.equals("NORTH") && dir2.equals("SOUTH")
                 || dir1.equals("EAST") && dir2.equals("WEST")
                 || dir1.equals("SOUTH") && dir2.equals("NORTH")

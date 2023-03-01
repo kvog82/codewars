@@ -7,7 +7,7 @@ public class NumberExpander {
         return result;
     }
 
-    private static String getResultString(String numString) {
+    private String getResultString(String numString) {
         String result = "";
 
         for (int i = 0; i < numString.length(); i++) {
