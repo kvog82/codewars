@@ -1,4 +1,4 @@
-package pigLatin;
+package org.example.pigLatin;
 
 import java.util.List;
 

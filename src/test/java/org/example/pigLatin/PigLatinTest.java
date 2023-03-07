@@ -1,5 +1,6 @@
-package pigLatin;
+package org.example.pigLatin;
 
+import org.example.pigLatin.PigLatin;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
