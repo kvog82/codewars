@@ -30,4 +30,12 @@ class MultiplesFinderTest {
         assertEquals(expected, result);
     }
 
+    @ParameterizedTest
+    @MethodSource("parameters")
+    void getSumStreamReturnsSum(int ex, int number) {
+        int res = multiplesFinder.findWithStream(number);
+
+        assertEquals(ex, res);
+    }
+
 }

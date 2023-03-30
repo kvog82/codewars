@@ -1,11 +1,10 @@
 package org.example.multiplesOf3Or5;
 
+import java.util.stream.IntStream;
+
 public class MultiplesFinder {
     public int find(int number) {
-        if (number <= 0) {
-            return 0;
-        }
-        return getSum(number);
+        return number < 0 ? 0 : getSum(number);
     }
 
     private static int getSum(int number) {
@@ -16,5 +15,15 @@ public class MultiplesFinder {
             }
         }
         return sum;
+    }
+
+    public int findWithStream(int number) {
+        return number < 0 ? 0 : getSumStream(number);
+    }
+
+    private  int getSumStream(int number) {
+        return IntStream.range(0,number)
+                .filter(num -> num % 3 == 0 || num % 5 == 0)
+                .sum();
     }
 }
