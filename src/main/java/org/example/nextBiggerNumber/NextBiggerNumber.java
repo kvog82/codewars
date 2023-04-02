@@ -1,91 +1,48 @@
 package org.example.nextBiggerNumber;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-import static java.util.Collections.sort;
+import java.util.Arrays;
+
 
 public class NextBiggerNumber {
     public long nextBiggerNumber(long n) {
+        char[] numberArray = Long.toString(n).toCharArray();
+        int i = findPivot(numberArray);
 
-        String numberString = Long.toString(n);
-        int length = numberString.length();
-        List<Long> numbers = new ArrayList<>();
-
-        if (length == 1) {
+        if (i == 0) {
             return -1;
         }
-
-        if (length == 2) {
-//            System.out.println("numberString = " + numberString);
-            String newNumber = "";
-            newNumber += numberString.charAt(1);
-            newNumber += numberString.charAt(0);
-            numbers.add(Long.parseLong(newNumber));
-        }
-
         else {
-            int count = length * 2;
-            while (count > 0) {
-                for (int i = 1; i < length; i++) {
-
-                    String begin = numberString.substring(0, i);
-                    char rotatingChar = numberString.charAt(i);
-                    String end = numberString.substring(i + 1);
-//                    System.out.println("begin = " + begin);
-//                    System.out.println("end = " + end);
-//                    System.out.println("rotatingChar = " + rotatingChar);
-
-                    String rotatedString = begin + end + rotatingChar;
-//                    System.out.println("rotatedString = " + rotatedString);
-                    long rotatedNumber = Long.parseLong(rotatedString);
-                    if (!numbers.contains(rotatedNumber)) {
-                        numbers.add(Long.parseLong(rotatedString));
-                    }
-
-                    numberString = rotatedString;
-                }
-                count--;
-            }
+            int min = getSubstituteFromRight(numberArray, i);
+            swap(numberArray, i - 1, min);
+            Arrays.sort(numberArray, i, numberArray.length);
         }
-        sort(numbers);
-        System.out.println("numbers = " + numbers);
-        if(numbers.size() == 1) {
-            return numbers.get(0);
-        }
-        int indexOfN = numbers.indexOf(n);
-        if (indexOfN == numbers.size()-1) {
-            return -1;
-        }
-
-        return numbers.get(numbers.indexOf(n)+1);
+        return Long.parseLong(String.valueOf(numberArray));
     }
 
-    public long nextBiggerNumberFromCodewars(long n) {
-        String str = String.valueOf(n);
-
-        int i = str.length()-2;
-        while((i >= 0) && (str.charAt(i) >= str.charAt(i+1))) {
-            i--;
+    private static int getSubstituteFromRight(char[] numberArray, int i) {
+        int x = numberArray[i - 1], min = i;
+        for (int j = i + 1; j < numberArray.length; j++) {
+            if (numberArray[j] > x && numberArray[j] < numberArray[min]) {
+                min = j;
+            }
         }
+        return min;
+    }
 
-        if(i < 0) {
-            return -1;
+    private static int findPivot(char[] numberArray) {
+        int i;
+        for (i = numberArray.length - 1; i > 0; i--) {
+            if (numberArray[i] > numberArray[i - 1]) {
+                break;
+            }
         }
+        return i;
+    }
 
-        int j = str.length()-1;
-        while(str.charAt(j) <= str.charAt(i)) {
-            j--;
-        }
-
-        char[] arr = str.toCharArray();
-        char tempStore = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tempStore;
-
-        Arrays.sort(arr, i+1, arr.length);
-
-        return Long.parseLong(new String(arr));
+    static void swap(char ar[], int i, int j) {
+        char temp = ar[i];
+        ar[i] = ar[j];
+        ar[j] = temp;
     }
 }

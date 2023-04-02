@@ -22,7 +22,8 @@ class NextBiggerNumberTest {
                 Arguments.of(2071, 2017),
                 Arguments.of(441, 414),
                 Arguments.of(414, 144),
-                Arguments.of(19009, 10990)
+                Arguments.of(19009, 10990),
+                Arguments.of(123456798, 123456789)
         );
     }
 
@@ -33,14 +34,4 @@ class NextBiggerNumberTest {
 
         assertEquals(expected, result);
     }
-
-    @ParameterizedTest
-    @MethodSource("parameters")
-    void nextBiggerNumberReturnsNumberCodewarsSolution(long expected, long number) {
-        long result = nextBiggerNumber.nextBiggerNumberFromCodewars(number);
-
-        assertEquals(expected, result);
-    }
-
-
 }
