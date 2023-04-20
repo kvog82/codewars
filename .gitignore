@@ -2,8 +2,8 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij,intellij+iml,intellij+all,phpunit,phpstorm,phpstorm+all,phpstorm+iml,maven,composer
 
 ### Composer ###
-composer.phar
-/vendor/
+php/composer.phar
+php/vendor/
 
 # Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
@@ -175,7 +175,7 @@ fabric.properties
 # Ignore everything but code style settings and run configurations
 # that are supposed to be shared within teams.
 
-*.idea/*
+.idea/*
 
 !.idea/codeStyles
 !.idea/runConfigurations
