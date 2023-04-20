@@ -6,25 +6,26 @@ use PHPUnit\Framework\TestCase;
 
 require_once 'WordReverser.php';
 
-class WordReverserTest extends TestCase
-{
+class WordReverserTest extends TestCase{
 
-    public function wordsDataProvider()
+
+    public function wordsDataProvider(): array
     {
         return [
             ["This is an example!", "sihT si na !elpmaxe"],
             ["hello hello", "olleh olleh"],
             ["double  spaces", "elbuod  secaps"],
-            ["apple", "elppa"]
+            [" ", " "]
         ];
     }
 
     /**
+     * @test
      * @dataProvider wordsDataProvider
      */
-    public function testReverseWords($input, $expectedOutput)
+    public function testReverseWords($input, $expected)
     {
         $WordReverser = new WordReverser();
-        $this->assertSame($WordReverser->reverseWords($input), $expectedOutput);
+        $this->assertSame($WordReverser->reverseWords($input), $expected);
     }
 }
