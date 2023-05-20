@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+// parseInt() reloaded: https://www.codewars.com/kata/525c7c5ab6aecef16e0001a5
+
 public class ParseIntReloaded {
     public int parseInt(String numStr) {
         List<String> wordsList = getWordsListWithoutAnds(numStr);

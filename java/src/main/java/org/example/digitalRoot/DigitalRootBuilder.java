@@ -3,6 +3,8 @@ package org.example.digitalRoot;
 import java.util.Arrays;
 import java.util.List;
 
+// Digital Root: https://www.codewars.com/kata/541c8630095125aba6000c00
+
 public class DigitalRootBuilder {
     public int buildDigitalRoot(int n) {
         while (n >= 10) {

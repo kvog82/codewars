@@ -1,5 +1,7 @@
 package org.example.meanSquare;
 
+// Mean Square Error: https://www.codewars.com/kata/51edd51599a189fe7f000015
+
 public class MeanSquareCalculator {
     public double calculate(int[] arr1, int[] arr2) {
         double sum = 0;

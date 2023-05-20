@@ -2,6 +2,7 @@ package org.example.countTheSmileyFaces;
 
 import java.util.List;
 
+// Count the smiley faces: https://www.codewars.com/kata/583203e6eb35d7980400002a
 public class SmileyCounter {
     private final List<Character> validEyes = List.of(':', ';');
     private final List<Character> validNose = List.of('-', '~');

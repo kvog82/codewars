@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// Directions Reduction: https://www.codewars.com/kata/550f22f4d758534c1100025a
+
 public class DirReduction {
     public String[] dirReduc(String[] arr) {
         List<String> reducedList = getReducedList(arr);

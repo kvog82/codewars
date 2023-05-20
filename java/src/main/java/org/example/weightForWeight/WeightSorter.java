@@ -3,6 +3,8 @@ package org.example.weightForWeight;
 import java.util.Comparator;
 import java.util.List;
 
+// Weight for weight: https://www.codewars.com/kata/55c6126177c9441a570000cc
+
 public class WeightSorter {
     public String orderWeights(String weights) {
         List<String> weightsList = List.of(weights.split("\\s"));

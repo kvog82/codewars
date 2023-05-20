@@ -3,6 +3,8 @@ package org.example.createPhoneNumber;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+// Create phone number: https://www.codewars.com/kata/525f50e3b73515a6db000b83
+
 public class PhoneNumberCreator {
     public String createPhoneNumber(int[] numbers) {
         String prefix = IntStream.of(numbers)

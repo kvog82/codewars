@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
+// Best travel: https://www.codewars.com/kata/55e7280b40e1c4a06d0000aa
+
 public class BestTravelFinder {
     public Integer chooseBestSum(int maxDistance, int numberOfCities, List<Integer> distances) {
         List<Integer> combinationSums = getCombinationSums(numberOfCities, distances);

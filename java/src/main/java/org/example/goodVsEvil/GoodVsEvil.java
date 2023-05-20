@@ -2,6 +2,8 @@ package org.example.goodVsEvil;
 
 import java.util.List;
 
+// Good vs Evil: https://www.codewars.com/kata/52761ee4cffbc69732000738
+
 public class GoodVsEvil {
     private final List<Integer> good = List.of(1, 2, 3, 3, 4, 10);
     private final List<Integer> evil = List.of(1, 2, 2, 2, 3, 5, 10);

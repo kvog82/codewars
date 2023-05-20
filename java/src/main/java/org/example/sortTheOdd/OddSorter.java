@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+// Sort the odd: https://www.codewars.com/kata/578aa45ee9fd15ff4600090d
+
 public class OddSorter {
     public int[] sortArray(int[] array) {
         List<Integer> sorted = new ArrayList<>();

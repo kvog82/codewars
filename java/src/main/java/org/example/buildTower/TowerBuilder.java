@@ -1,5 +1,7 @@
 package org.example.buildTower;
 
+// Build Tower: https://www.codewars.com/kata/576757b1df89ecf5bd00073b
+
 public class TowerBuilder {
     public String[] buildTower(int floors) {
         String[] tower = new String[floors];

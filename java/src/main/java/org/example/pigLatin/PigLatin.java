@@ -2,6 +2,8 @@ package org.example.pigLatin;
 
 import java.util.List;
 
+// Simple Pig Latin: https://www.codewars.com/kata/520b9d2ad5c005041100000f
+
 public class PigLatin {
     public String pigIt(String str) {
         List<String> wordsList = List.of(str.split(" "));

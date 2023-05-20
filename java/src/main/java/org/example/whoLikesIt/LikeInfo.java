@@ -1,5 +1,7 @@
 package org.example.whoLikesIt;
 
+// Who likes it: https://www.codewars.com/kata/5266876b8f4bf2da9b000362
+
 public class LikeInfo {
     public String generateText(String... names) {
         return switch (names.length) {

@@ -3,6 +3,7 @@ package org.example.findTheUniqueNumber;
 import java.util.HashMap;
 import java.util.Map;
 
+// Find the unique number: https://www.codewars.com/kata/55f81f9aa51f9b72a200002f
 
 public class UniqueNumberFinder {
     public double findUniqueNumber(double[] arr) {

@@ -2,6 +2,7 @@ package org.example.isANumberPrime;
 
 public class PrimeNumberChecker {
 
+// Is a number prime? https://www.codewars.com/kata/5262119038c0985a5b00029f
 
     public boolean isPrime(int num) {
         if(num == 2) {

@@ -5,6 +5,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+// Find the odd int: https://www.codewars.com/kata/find-the-odd-int
+
 public class OddNumberFinder {
     public int findOdd(int[] array) {
         Map<Integer, Long> numberOccurrences = Arrays.stream(array)

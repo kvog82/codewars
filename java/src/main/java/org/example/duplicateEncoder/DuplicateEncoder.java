@@ -3,6 +3,8 @@ package org.example.duplicateEncoder;
 import java.util.Collections;
 import java.util.List;
 
+// Duplicate Encoder: https://www.codewars.com/kata/54b42f9314d9229fd6000d9c
+
 public class DuplicateEncoder {
     public String encode(String word){
         StringBuilder result = new StringBuilder();

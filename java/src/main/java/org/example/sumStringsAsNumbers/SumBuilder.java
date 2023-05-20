@@ -1,5 +1,6 @@
 package org.example.sumStringsAsNumbers;
 
+// Sum Strings as numbers: https://www.codewars.com/kata/5324945e2ece5e1f32000370
 public class SumBuilder {
 
     public String sumStrings(String a, String b) {

@@ -3,6 +3,8 @@ package org.example.twoSum;
 import java.util.ArrayList;
 import java.util.List;
 
+// Two Sum: https://www.codewars.com/kata/52c31f8e6605bcc646000082
+
 public class TwoSum {
     public int[] twoSum(int[] numbers, int target) {
         List<Integer> indices = new ArrayList<>();

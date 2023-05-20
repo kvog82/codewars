@@ -2,6 +2,8 @@ package org.example.multiplesOf3Or5;
 
 import java.util.stream.IntStream;
 
+// Multiples of 3 or 5: https://www.codewars.com/kata/514b92a657cdc65150000006
+
 public class MultiplesFinder {
     public int find(int number) {
         return number < 0 ? 0 : getSum(number);
