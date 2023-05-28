@@ -1,6 +1,6 @@
 package org.example.splitStrings;
 
-import java.util.Arrays;
+//Split Strings: https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
 
 public class StringSplitter {
     public String[] split(String s) {
