@@ -1,4 +1,4 @@
-package org.example.HumanReadableTime;
+package org.example.humanReadableTime;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
